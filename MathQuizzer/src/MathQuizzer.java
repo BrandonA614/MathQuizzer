@@ -66,7 +66,7 @@ public class MathQuizzer
 				Scanner answerInput = new Scanner(System.in);
 				String answer = answerInput.nextLine();
 				
-				
+				//Possibly no spaces or just have them input the " * X) + X"
 				if(answer == "int randomNumber = (int)(Math.random() * " + RandomNumber + ") +" + randomNumberTwo){
 					System.out.println("You got it right!!");
 					counter++;
