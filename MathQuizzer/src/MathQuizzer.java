@@ -9,40 +9,27 @@ public class MathQuizzer
 
 		public static void main(String[] args)
 			{
+				//Startup
 				
-//				Scanner userInput = new Scanner(System.in);
-//				System.out.println("How many questions would you like to answer?");
-//				Scanner intInput = new Scanner(System.in);
-//				int amount = intInput.nextInt(); 
-//		
-				
-//				
-//				System.out.println("Given int randomNumber = (int)(Math.random() * " + RandomNumber + ") + " + randomNumberTwo + "");
-//				Scanner answerInput = new Scanner(System.in);
-//				int answerAmount = answerInput.nextInt(); 
-//				Scanner answerInputTwo = new Scanner(System.in);
-//				int answerAmountTwo = answerInputTwo.nextInt(); 
-//				
-//				if(RandomNumber + randomNumberTwo == answerAmount + answerAmountTwo){
-//					System.out.println("You got it right!");
-//					
-//				}else 
-//					System.out.println("You got it wrong!");
-				//MathQuizOne();
 				System.out.println("How many questions would you like to answer?");
 				Scanner amount = new Scanner(System.in);
 				int input = amount.nextInt();
 				
+				
+				
 //				MathQuizTwo();
 				
-				
+				//For loop with user input for length COMPLETE
 				for(int i=1; i<input + 1; i++){
 		              MathQuizOne();
 //					  MathQuizTwo();
 				}
 				
+				
 			}
-
+		
+		
+		//First Quiz COMPLETE -- may need to work on counter, definitely recheck.
 			public static void MathQuizOne(){
 				int counter = 0;
 				//Number Gens
@@ -66,7 +53,10 @@ public class MathQuizzer
 				
 				System.out.println("Your score is currently " + counter);
 			}
-		
+			
+			//Can't seem to get the values to match up. Possible that it cant understand 
+			//strings when checking if they are equal in the if statement. Re-look / Research.
+			
 			public static void MathQuizTwo(){
 				int RandomNumber = new Random().nextInt(5) + 1;
 				int randomNumberTwo = new Random().nextInt(5) + 1;
