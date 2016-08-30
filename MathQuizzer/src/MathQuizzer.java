@@ -6,32 +6,29 @@ public class MathQuizzer
 	{
 		// Random Number Gen	
 		static int counter;
-
+		
 		public static void main(String[] args)
 			{
 				//Startup
-				
 				System.out.println("How many questions would you like to answer?");
 				Scanner amount = new Scanner(System.in);
 				int input = amount.nextInt();
 				
-				
-				
-//				MathQuizTwo();
-				
 				//For loop with user input for length COMPLETE
 				for(int i=1; i<input + 1; i++){
-		              MathQuizOne();
-//					  MathQuizTwo();
+					
+//		              MathQuizOne();
+		              MathQuizTwo();
 				}
 				
 				
 			}
 		
 		
-		//First Quiz COMPLETE -- may need to work on counter, definitely recheck.
+		
+		//First Quiz COMPLETE 
 			public static void MathQuizOne(){
-				int counter = 0;
+				
 				//Number Gens
 				int RandomNumber = new Random().nextInt(5) + 1;
 				int randomNumberTwo = new Random().nextInt(5) + 1;
@@ -47,32 +44,39 @@ public class MathQuizzer
 				if(RandomNumber + randomNumberTwo == answerAmount + answerAmountTwo){
 					System.out.println("You got it right!");
 					counter++;
-				}else 
+					System.out.println("Your score is currently " + counter);
+				}else{ 
 					System.out.println("You got it wrong!");
-				counter--;
-				
-				System.out.println("Your score is currently " + counter);
+					counter--;
+					System.out.println("Your score is currently " + counter);
+				}
 			}
 			
-			//Can't seem to get the values to match up. Possible that it cant understand 
-			//strings when checking if they are equal in the if statement. Re-look / Research.
-			
+			//Always Outputs double "RandomNumber"
 			public static void MathQuizTwo(){
 				int RandomNumber = new Random().nextInt(5) + 1;
-				int randomNumberTwo = new Random().nextInt(5) + 1;
+				int randomNumberTwo = new Random().nextInt(RandomNumber) + 1;
 				
+				System.out.println("");
+				System.out.println("Given int random number = (int)(Math.random() * X) + Y)");
+				System.out.println("");
 				
-				System.out.println("Given " + RandomNumber +" " + randomNumberTwo );
+				System.out.println("What would X and Y be if I was looking for a range between " + RandomNumber +" and "  + randomNumberTwo);
+				System.out.println("");
+				
 				Scanner answerInput = new Scanner(System.in);
-				String answer = answerInput.nextLine();
+				int answer = answerInput.nextInt();
+				Scanner answerInputTwo = new Scanner(System.in);
+				int answerTwo = answerInputTwo.nextInt();
 				
-				//Possibly no spaces or just have them input the " * X) + X"
-				if(answer == "int randomNumber = (int)(Math.random() * " + RandomNumber + ") +" + randomNumberTwo){
-					System.out.println("You got it right!!");
+				if(answer + answerTwo == RandomNumber + randomNumberTwo){
+					System.out.println("You got it right!");
 					counter++;
+					System.out.println("Your score is currently " + counter);
 				}else {
-					System.out.println("You got it wrong :(" );
+					System.out.println("You got it wrong!");
 					counter--;
+					System.out.println("Your score is currently " + counter);
 				}
 				
 				
