@@ -4,26 +4,31 @@ import java.util.Scanner;
 
 public class MathQuizzer
 	{
-		// Random Number Gen	
+	
+
 		static int counter;
+		
 		public static void main(String[] args)
 			{
 				//Startup
 				System.out.println("How many questions would you like to answer?");
 				Scanner amount = new Scanner(System.in);
-				int input = amount.nextInt()  / 2;
+				int input = amount.nextInt();
 				
 				//For loop with user input for length COMPLETE
 				for(int i=1; i<input ; i++){
 					
-					  MathQuizOne();
-		              MathQuizTwo();
+					  MathQuizzes();
 				}
 				
 				
 			}
 		
-		
+		public static void MathQuizzes(){
+			MathQuizOne();
+			MathQuizTwo();
+			
+		}
 		
 		//First Quiz COMPLETE 
 			public static void MathQuizOne(){
