@@ -7,7 +7,7 @@ public class MathQuizzer
 	
 
 		static int counter;
-		
+		static int i;
 		public static void main(String[] args)
 			{
 				//Startup
@@ -16,7 +16,7 @@ public class MathQuizzer
 				int input = amount.nextInt();
 				
 				//For loop with user input for length COMPLETE
-				for(int i=1; i<input ; i++){
+				for(i=0; i < input ; i++){
 					
 					  MathQuizzes();
 				}
@@ -25,7 +25,10 @@ public class MathQuizzer
 			}
 		
 		public static void MathQuizzes(){
-			MathQuizOne();
+			if(i % 2 == 0){
+
+				MathQuizOne();
+			}else
 			MathQuizTwo();
 			
 		}
@@ -38,7 +41,7 @@ public class MathQuizzer
 				int randomNumberTwo = new Random().nextInt(6) + 1;
 				
 				//Asks for Input and Outputs initial Questions
-				System.out.println("Given int randomNumber = (int)(Math.random() * " + RandomNumber + ") + " + randomNumberTwo + "");
+				System.out.println("Given ** Random().nextInt(* " + RandomNumber + ") + " + randomNumberTwo + "");
 				Scanner answerInput = new Scanner(System.in);
 				int answerAmount = answerInput.nextInt(); 
 				Scanner answerInputTwo = new Scanner(System.in);
@@ -60,13 +63,13 @@ public class MathQuizzer
 			public static void MathQuizTwo(){
 				
 				
-				int RandomNumber = new Random().nextInt(10) + 1;
-				int randomNumberTwo = new Random().nextInt(RandomNumber) + 1;
+				int RandomNumberQuizTwo = new Random().nextInt(10) + 1;
+				int randomNumberQuizTwoTwo = new Random().nextInt(RandomNumberQuizTwo) + 1;
 				//Initial Question
 				System.out.println("");
 				System.out.println("Given int random number = (int)(Math.random() * X) + Y)");
 				System.out.println("");
-				System.out.println("What would X and Y be if I was looking for a range between " + RandomNumber +" and "  + randomNumberTwo);
+				System.out.println("What would X and Y be if I was looking for a range between " + RandomNumberQuizTwo +" and "  + randomNumberQuizTwoTwo);
 				System.out.println("");
 				
 				//Scans for User Input for their answers
@@ -75,7 +78,7 @@ public class MathQuizzer
 				Scanner answerInputTwo = new Scanner(System.in);
 				int answerTwo = answerInputTwo.nextInt();
 				//Basically outputs right or wrong and score
-				if(answer + answerTwo == RandomNumber + randomNumberTwo){
+				if(answer + answerTwo == RandomNumberQuizTwo + randomNumberQuizTwoTwo){
 					System.out.println("You got it right!");
 					counter++;
 					System.out.println("Your score is currently " + counter);
